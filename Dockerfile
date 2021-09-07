@@ -66,5 +66,6 @@ RUN apt-get install build-essential -y
 RUN gem install google-api-client
 RUN gem install fastlane -NV
 
-
+# npm 설치
+RUN npm install -legacy-peer-deps
 
