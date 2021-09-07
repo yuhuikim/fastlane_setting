@@ -28,6 +28,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 #nodejs 설치 및 npm install
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get install -y nodejs
+RUN npm install -legacy-peer-deps
 
 #Gradle 설치 및 환경변수 등록
 ADD https://services.gradle.org/distributions/gradle-6.7-all.zip /opt/
@@ -66,6 +67,4 @@ RUN apt-get install build-essential -y
 RUN gem install google-api-client
 RUN gem install fastlane -NV
 
-# npm 설치
-RUN npm install -legacy-peer-deps
 
